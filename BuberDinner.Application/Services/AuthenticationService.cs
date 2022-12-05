@@ -25,6 +25,6 @@ public class AuthenticationService : IAuthenticationService
     var userId = Guid.NewGuid();
     // Create a JWT token
     var token = _jwtTokenGenerator.GenerateToken(userId, firstName, lastName);
-    return new AuthenticationResult(Guid.NewGuid(), firstName, lastName, email, "token");
+    return new AuthenticationResult(Guid.NewGuid(), firstName, lastName, email, token);
   }
 }
