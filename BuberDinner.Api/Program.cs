@@ -8,7 +8,7 @@ var builder = WebApplication.CreateBuilder(args);
   // adding application layer dependencies using an extension method
   builder.Services.
   AddApplication().
-  AddInfrastructure();
+  AddInfrastructure(builder.Configuration);
   builder.Services.AddControllers();
 }
 
