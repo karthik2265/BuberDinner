@@ -10,7 +10,7 @@ namespace BuberDinner.Application;
 
 public static class DependencyInjection
 {
-  public static IServiceCollection AddApplication(this IServiceCollection services)
+  public static IServiceCollection AddInfrastructure(this IServiceCollection services)
   {
     services.AddSingleton<IJwtTokenGenerator, JwtTokenGenerator>();
     services.AddSingleton<IDateTimeProvider, DateTimeProvider>();
