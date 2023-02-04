@@ -25,7 +25,7 @@ public class AuthenticationController : ControllerBase
   }
 
   [HttpPost("login")]
-  public IActionResult Register(LoginRequest request)
+  public IActionResult Login(LoginRequest request)
   {
     var authResult = _authenticationService.Login(request.Email, request.Password);
     var response = new AuthenticationResponse(authResult.User.Id, authResult.User.FirstName, authResult.User.LastName, authResult.User.Email, authResult.Token);
